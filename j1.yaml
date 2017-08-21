@@ -1,0 +1,28 @@
+######################################################################################
+# --- Exposing Service to Make Reachable Ports 80,443 from Outside for Fronts ---- ###
+######################################################################################
+
+################# FRONTs #######################
+apiVersion: v1
+kind: Service
+metadata:
+  name: shell-lb
+  labels:
+    app: shell
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+    name: https
+#  externalIPs:
+#  - 107.182.229.211  # Please replace this ip by your
+#  - 107.182.229.196  # Please replace this ip by your
+#  - 107.182.229.209  # Please replace this ip by your
+  selector:
+    app: shell
