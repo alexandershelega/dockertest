@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: BRANCH_NAME
-        image: harbor.picsart.tools/analytics/shell:BUILD_NUMBER
+        image: harbor.picsart.tools/analytics/shell:BRANCH_NAME-BUILD_NUMBER
         imagePullPolicy: Always
         env:
         - name: OWNER_PASSWD
