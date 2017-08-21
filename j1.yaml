@@ -8,7 +8,7 @@ kind: Service
 metadata:
   name: BRANCH_NAME-lb
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: BRANCH_NAME.test.picsart.tools.
+    external-dns.alpha.kubernetes.io/hostname: app-BRANCH_NAME.test.picsart.tools.
   labels:
     app: BRANCH_NAME
 spec:
