@@ -1,4 +1,5 @@
-# dockertest
-22222
-2222
-213123
+[![Build Status](https://ci.picsart.tools/buildStatus/icon?job=shell)](https://ci.picsart.tools/job/shell/)
+
+
+
+[![Build Status](https://ci.picsart.tools/job/shell/badge/icon)](https://ci.picsart.tools/job/shell/)
