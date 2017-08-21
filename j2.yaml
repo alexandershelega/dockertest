@@ -6,7 +6,7 @@ kind: Deployment
 metadata:
   name: BRANCH_NAME
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
