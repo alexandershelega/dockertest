@@ -1,4 +1,4 @@
-######################################################################################
+//#####################################################################################
 # --- Exposing Service to Make Reachable Ports 80,443 from Outside for Fronts ---- ###
 ######################################################################################
 
@@ -6,23 +6,21 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: shell-lb
+  name: BRANCH_NAME-lb
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: BRANCH_NAME.prod.picsart.tools.
   labels:
-    app: shell
+    app: BRANCH_NAME
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 80
-    protocol: TCP
-    name: http
   - port: 3000
     protocol: TCP
     targetPort: 3000
-    name: https
+    name: shell
 #  externalIPs:
 #  - 107.182.229.211  # Please replace this ip by your
 #  - 107.182.229.196  # Please replace this ip by your
 #  - 107.182.229.209  # Please replace this ip by your
   selector:
-    app: shell
+    app: BRANCH_NAME        

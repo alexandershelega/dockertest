@@ -4,17 +4,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: shell
+  name: BRANCH_NAME
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: shell
+        app: BRANCH_NAME
     spec:
       containers:
-      - name: shell
-        image: harbor.picsart.tools/analytics/shell:latest
+      - name: BRANCH_NAME
+        image: harbor.picsart.tools/analytics/shell:BUILD_NUMBER
         imagePullPolicy: Always
         env:
         - name: OWNER_PASSWD
